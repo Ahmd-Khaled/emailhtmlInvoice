@@ -1,0 +1,419 @@
+/* @font-face {
+    font-family: helveticalight;
+    src: url(../helveticafont/helveticalight.ttf);
+    font-weight:lighter;
+}
+@font-face {
+    font-family: helveticanormal;
+    src: url(../helveticafont/helvetica.ttf);
+    font-weight: normal;
+}
+@font-face {
+    font-family: helveticabold;
+    src: url(../helveticafont/helveticabold.ttf);
+    font-weight: bold;
+} */
+
+/* Start Variables */
+:root {
+  --main-color: #10cab7;
+  --secondary-color: #2c4755;
+  --paragraph-color: #575757;
+  --section-background: #f6f6f6;
+  --padding-top: 60px;
+  --padding-bottom: 60px;
+}
+/* End Variables */
+
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fafbfb;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+/* Start Components */
+.mainContainer {
+  background-color: #fff;
+  width: 75%;
+  margin: 12px auto 20px;
+  padding: 20px 16px;
+}
+@media (min-width: 350px) {
+  .mainContainer {
+    width: 95%;
+  }
+}
+@media (min-width: 576px) {
+  .mainContainer {
+    width: 95%;
+  }
+}
+@media (min-width: 768px) {
+  .mainContainer {
+    width: 95%;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .mainContainer {
+    width: 90%;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .mainContainer {
+    width: 85%;
+  }
+}
+
+.orderContainer .actualReceipt {
+  padding: 36px;
+}
+
+.orderContainer .actualReceipt .invoicePrint {
+  border: 3px dashed #e9e9e9;
+}
+
+.orderContainer .actualReceipt .invoicePrintTop {
+  padding: 16px 36px 36px;
+}
+
+.orderContainer .orderHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+
+.orderContainer .orderHead .imgLogo {
+  width: 218px;
+  height: 90px;
+}
+
+.orderContainer .orderHead .imgLogo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.orderContainer .orderCode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.orderContainer .orderCode .num {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+}
+.orderContainer .orderCode .txt {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #586674;
+}
+
+.orderMainInfo {
+  margin-bottom: 48px;
+  padding-inline-start: 16px;
+  padding-inline-end: 16px;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.orderMainInfo .topTitle {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #eba621;
+  margin-bottom: 2px;
+  height: 18px;
+}
+
+.orderMainInfo .fromBranch,
+.orderMainInfo .toUser {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.orderMainInfo .fromBranch .title,
+.orderMainInfo .toUser .title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  margin-bottom: 4px;
+}
+
+.orderMainInfo .fromBranch .text,
+.orderMainInfo .toUser .text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #484b4e;
+}
+
+.orderMainInfo .payment {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.orderMainInfo .payment .paymentItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.orderMainInfo .payment .paymentItem .payTitle {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  width: 150px;
+}
+.orderMainInfo .payment .paymentItem .payValue {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0.01em;
+  color: #484b4e;
+}
+
+.orderInvoiceList {
+  display: flex;
+  flex-direction: column;
+  /* gap: 12px; */
+  padding-inline-start: 0px !important;
+}
+.orderInvoiceList .noItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f55157;
+  text-align: center;
+  width: 100%;
+  font-size: 18px;
+  padding: 4px;
+}
+
+.orderInvoiceList .listHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 6px 10px;
+  border-radius: 4px;
+}
+
+.orderInvoiceList .listHead .item {
+  flex-grow: 1;
+}
+.orderInvoiceList .listHead .item .tableHead {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+}
+.orderInvoiceList .listItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  background-color: #e9e9e9;
+  padding: 6px 10px 6px 16px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.orderInvoiceList .listItem .item {
+  flex-grow: 1;
+  font-size: 14px;
+  color: #101011;
+}
+
+.orderInvoiceList .listItem  .description {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.orderInvoiceList .listItem  .description span:first-of-type {
+  font-weight: 700;
+}
+.orderInvoiceList .listItem  .description span:last-of-type {
+  color: #484b4e;
+}
+
+.orderSummary {
+  margin-top: 30px;
+  display: flex;
+  gap: 16px;
+}
+
+.orderSummary .notes {
+  flex: 4;
+}
+
+.orderSummary .notes span {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+}
+.orderSummary .notes p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #484b4e;
+  width: 50%;
+}
+
+.orderSummary .summary {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+}
+
+.orderSummary .summary .subTotal,
+.orderSummary .summary .discount {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.orderSummary .summary .subTotal .summTitle,
+.orderSummary .summary .discount .summTitle {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  text-transform: capitalize;
+  width: 120px;
+}
+
+.orderSummary .summary .finalAmount {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 10px;
+  border-top: 1px solid #808080;
+  padding-top: 10px;
+}
+
+.orderSummary .summary .finalAmount .finalTitle {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  text-transform: capitalize;
+}
+.orderSummary .summary .finalAmount .finalVal {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 22px;
+  color: #eba621;
+}
+.orderSummary .summary .priceText {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+}
+
+.orderFooter {
+  background-color: #e9e9e9;
+  padding: 36px;
+}
+
+.orderFooter .fTitle {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  margin-bottom: 20px;
+}
+.orderFooter .footerList {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.orderFooter .footerList .footerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.orderFooter .footerList .footerItem .itemTtl {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 14px;
+  letter-spacing: 0.01em;
+  color: #101011;
+  margin-bottom: 4px;
+}
+
+.orderFooter .footerList .footerItem .itemTxt {
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+  color: #484b4e;
+}
