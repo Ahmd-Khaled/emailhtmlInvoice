@@ -51,7 +51,7 @@ body {
   }
 }
 /* Medium */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .container {
     width: 970px;
   }
@@ -87,9 +87,11 @@ body {
   }
 }
 /* Medium */
-@media (min-width: 992px) {
+@media (max-width: 992px) {
   .mainContainer {
-    width: 90%;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0;
   }
 }
 /* Large */
@@ -103,12 +105,30 @@ body {
   padding: 36px;
 }
 
+@media (max-width: 992px) {
+  .orderContainer .actualReceipt {
+    padding: 0px;
+  }
+}
+
 .orderContainer .actualReceipt .invoicePrint {
   border: 3px dashed #e9e9e9;
 }
 
 .orderContainer .actualReceipt .invoicePrintTop {
   padding: 16px 36px 36px;
+}
+
+@media (max-width: 992px) {
+  .orderContainer .actualReceipt .invoicePrintTop {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .orderContainer .actualReceipt .invoicePrintTop {
+    padding: 16px 8px;
+  }
 }
 
 .orderContainer .orderHead {
@@ -124,10 +144,23 @@ body {
   height: 90px;
 }
 
+@media (max-width: 992px) {
+  .orderContainer .orderHead .imgLogo {
+
+  }
+}
+
 .orderContainer .orderHead .imgLogo img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+@media (max-width: 992px) {
+  .orderContainer .orderHead .imgLogo img {
+    /* width: 90%;
+    height: 90%; */
+  }
 }
 
 .orderContainer .orderCode {
@@ -161,6 +194,13 @@ body {
   justify-content: space-between;
   gap: 16px;
 }
+@media (max-width: 992px) {
+  .orderMainInfo {
+    flex-direction: column;
+    padding-inline-start: 0px;
+    padding-inline-end: 0px;
+  }
+}
 
 .orderMainInfo .topTitle {
   font-size: 18px;
@@ -170,6 +210,18 @@ body {
   color: #eba621;
   margin-bottom: 2px;
   height: 18px;
+}
+
+.orderMainInfo .fromTo {
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .orderMainInfo .fromTo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .orderMainInfo .fromBranch,
@@ -205,6 +257,11 @@ body {
   flex-direction: column;
   gap: 2px;
 }
+@media (max-width: 992px) {
+  .orderMainInfo .payment {
+    padding-inline-start: 0px;
+  }
+}
 
 .orderMainInfo .payment .paymentItem {
   display: flex;
@@ -219,6 +276,13 @@ body {
   color: #101011;
   width: 150px;
 }
+
+@media (max-width: 992px) {
+  .orderMainInfo .payment .paymentItem .topTitle {
+    /* display: none; */
+  }
+}
+
 .orderMainInfo .payment .paymentItem .payValue {
   font-size: 14px;
   font-weight: 400;
@@ -263,6 +327,13 @@ body {
   letter-spacing: 0.01em;
   color: #101011;
 }
+
+@media (max-width: 992px) {
+  .orderInvoiceList .listHead .item .tableHead {
+    font-size: 12px;
+  }
+}
+
 .orderInvoiceList .listItem {
   display: flex;
   align-items: center;
@@ -274,22 +345,35 @@ body {
   margin-bottom: 12px;
 }
 
+
 .orderInvoiceList .listItem .item {
   flex-grow: 1;
   font-size: 14px;
   color: #101011;
 }
 
-.orderInvoiceList .listItem  .description {
+@media (max-width: 992px) {
+  .orderInvoiceList .listItem .item  {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 992px) {
+  .orderInvoiceList .listItem .item  {
+    font-size: 10px;
+  }
+}
+
+.orderInvoiceList .listItem .description {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
 
-.orderInvoiceList .listItem  .description span:first-of-type {
+.orderInvoiceList .listItem .description span:first-of-type {
   font-weight: 700;
 }
-.orderInvoiceList .listItem  .description span:last-of-type {
+.orderInvoiceList .listItem .description span:last-of-type {
   color: #484b4e;
 }
 
@@ -297,6 +381,13 @@ body {
   margin-top: 30px;
   display: flex;
   gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .orderSummary {
+    flex-direction: column-reverse;
+    gap: 32px;
+  }
 }
 
 .orderSummary .notes {
@@ -316,6 +407,12 @@ body {
   line-height: 20px;
   color: #484b4e;
   width: 50%;
+}
+
+@media (max-width: 992px) {
+  .orderSummary .notes p {
+    width: 100%;
+  }
 }
 
 .orderSummary .summary {
@@ -354,6 +451,14 @@ body {
   padding-top: 10px;
 }
 
+@media (max-width: 992px) {
+  .orderSummary .summary .finalAmount {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
 .orderSummary .summary .finalAmount .finalTitle {
   font-size: 16px;
   font-weight: 700;
@@ -381,6 +486,13 @@ body {
   padding: 36px;
 }
 
+@media (max-width: 992px) {
+  .orderFooter {
+    margin-top: 32px;
+    padding: 16px;
+  }
+}
+
 .orderFooter .fTitle {
   font-size: 20px;
   font-weight: 600;
@@ -393,6 +505,14 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .orderFooter .footerList {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-inline-start: 0px;
+  }
 }
 
 .orderFooter .footerList .footerItem {
