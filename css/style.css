@@ -140,13 +140,12 @@ body {
 }
 
 .orderContainer .orderHead .imgLogo {
-  width: 218px;
-  height: 90px;
+  /* width: 218px;
+  height: 90px; */
 }
 
 @media (max-width: 992px) {
   .orderContainer .orderHead .imgLogo {
-
   }
 }
 
@@ -345,7 +344,6 @@ body {
   margin-bottom: 12px;
 }
 
-
 .orderInvoiceList .listItem .item {
   flex-grow: 1;
   font-size: 14px;
@@ -353,13 +351,13 @@ body {
 }
 
 @media (max-width: 992px) {
-  .orderInvoiceList .listItem .item  {
+  .orderInvoiceList .listItem .item {
     font-size: 13px;
   }
 }
 
 @media (max-width: 992px) {
-  .orderInvoiceList .listItem .item  {
+  .orderInvoiceList .listItem .item {
     font-size: 10px;
   }
 }
